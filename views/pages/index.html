@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | FlowerCo</title>
+    <script src="https://kit.fontawesome.com/5dd9ddd947.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/styles/styles.css" type="text/css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+<!-- header -->
+<header>
+    <a href="../pages/index.html" class="logo">
+        <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="logo"> 
+    </a>
+    <nav class="navbar">
+        <ul class="navbar-list hover active-link">
+            <li><a href="#about">About</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="javascript:void(0);" class="menu-icon">
+        <i class="fas fa-bars fa-2x"></i>
+    </a>
+</header>   
+
+<!-- main content -->
+<main class="side-by-side">
+    <section>
+        <h1 class="center-text"> Handpick a Virtual Flower Bouquet </h1>
+
+<!-- bouquet -->
+        <div class="wrapper">
+            <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="your design">
+        </div>
+<!-- your design text -->
+        <h3 class="center-text">Your design</h3>
+    </section>
+    
+<!-- dropdown options -->
+    <section class="wrapper">
+        <button class="accordion"> Base</button>
+            <div class="panel" class="flex-row">
+                <label for="base" class="flex-column">
+                    <img src="../../public/images/Pot.png" alt="small brown pot">
+                    <input type="radio" name="base" value="pot" checked>
+                    <span>Pot</span> 
+                </label>
+
+                <label for="base" class="flex-column">Tape 
+                    <input type="radio" name="base" value="tape">
+                    <img src="../../public/images/Tape.png" alt="strip of clear tape">
+                </label>
+            
+                <label for="base" class="flex-column">Ribbon
+                    <input type="radio" name="base" value="ribbon">
+                    <img src="../../public/images/Ribbon.png" alt="small red ribbon bow">
+                </label>
+            </div>
+
+            <button class="accordion">Flowers</button>
+            <div class="panel">
+                <label for="flower">Morning Glory</label>
+                <input type="radio" name="flower" value="morning-glory" checked>
+                <img src="../../public/images/Morning Glory.png" alt="Light blue Morning Glory">
+
+                <label for="flower">Coneflower
+                    <input type="radio" name="flower" value="coneflower">
+                    <img src="../../public/images/Coneflower.png" alt="Light pink Coneflower">
+                </label>
+            
+                <label for="flower">Grape Hyacinth
+                    <input type="radio" name="flower" value="grape-hyacinth">
+                    <img src="../../public/images/Grape Hyacinth.png" alt="purple Grape Hyacinth">
+                </label>
+            </div>
+
+            <button class="accordion">Greenery</button>
+            <div class="panel">
+                <label for="greenery">Silver Dollar Eucalyptus
+                    <input type="radio" name="greenery" value="silver-dollar-eucalyptus" checked>
+                    <img src="../../public/images/Silver Dollar Eucalyptus.png" alt="Silver Dollar Eucalyptus">
+                </label>
+
+                <label for="greenery">Baby's Breath
+                    <input type="radio" name="greenery" value="babys-breath">
+                    <img src="../../public/images/Babys Breath.png" alt="Baby's Breath">
+                </label>
+            
+                <label for="greenery">Leather Fern
+                    <input type="radio" name="greenery" value="leather-fern">
+                    <img src="../../public/images/Leather Fern.png" alt="Leather Fern">
+                </label>
+            </div>
+
+            <button class="accordion">Accents</button>
+            <div class="panel">
+                <label for="accents">Bubbles
+                    <input type="radio" name="accents" value="bubbles" checked>
+                    <img src="../../public/images/Bubbles.png" alt="blue bubbles">
+                </label>
+
+                <label for="accents">Hearts
+                    <input type="radio" name="accents" value="hearts">
+                    <img src="../../public/images/Hearts.png" alt="red hearts">
+                </label>
+            
+                <label for="accents">Sparkles
+                    <input type="radio" name="accents" value="sparkles">
+                    <img src="../../public/images/Sparkles.png" alt="yellow sparkles">
+                </label>
+            </div>
+<!-- Next/submit button --> 
+            <button class="rounded-btn" type="submit" form="creation" value="Submit">Next</button> 
+        </section>
+<!-- </div> -->  
+</main>
+
+<!-- footer -->
+<footer>
+    <p class="center-text">&copy; FlowerCo</p>
+
+    <div class="flex-row">
+        <a href="https://www.pinterest.com/">
+            <i class="fab fa-pinterest"></i>
+        </a>
+        
+        <a href="https://www.instagram.com/">
+            <i class="fab fa-instagram"></i>
+        </a>
+      
+        <a href="https://github.com/agathaalmunir">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/agatha-almunir">
+            <i class="fab fa-linkedin"></i>
+        </a>         
+    </div>
+
+</footer>
+</body>
+</html>

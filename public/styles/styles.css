@@ -1,0 +1,234 @@
+/* #FFA303  orange
+ #FFE0AE champange
+#F5631A burst sienna
+
+ yellow green 
+*#81B622 lime green */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+  --light-green: #787D12;
+  --burnt-sienna: #F5631A;
+  --champange: #ffe3ae;
+  --orange: #FFA303;
+  --dark-purple: #653375;
+  --white: #FFFFFF;
+  --teal: #59D7EE;
+  --lilac: #cdaad6;
+}
+
+
+body {
+    background-color: var(--white);
+    color: var(--burnt-sienna);
+    font-size: 1em;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.rounded-btn {
+  border: none;
+  border-radius: 0.8em;
+  padding: 0.8em;
+  text-align: center;
+  width: 3.8em;
+  margin: auto;
+  display: block;
+  background-color: var(--light-green);
+  color: var(--white);
+  margin: 2em auto;
+}
+
+.flex-row {
+  display: flex;
+  width: 2em;
+  padding: 0em;
+}
+
+label.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+/* header */
+a.logo img{
+  width: 5rem;
+  display: block;
+  padding: 0.8rem 1rem;
+}
+
+ul.navbar-list li {
+  list-style: none;
+}
+
+ul.navbar-list li a {
+  text-decoration: none;
+  color: var(--dark-purple);
+  text-transform: uppercase;
+  /* display: block; */
+  padding: 0.8rem 1rem;
+}
+
+a.menu-icon {
+	display: block;
+	color: var(--lilac);
+	position: absolute;
+	right: .5em;
+	top: .5em;
+	padding: 1rem .8rem;
+}
+
+/* Navbar hidden */
+nav.navbar {
+  display: none;
+}
+
+nav.navbar.open {
+  display: block;
+  max-width: 75%;
+  margin: 2em;
+}
+
+.hover a:hover {
+  color: var(--orange);
+}
+
+.active-link a:active {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  background-color: var(--lilac);
+  margin-top: 1rem;
+}
+
+footer p {
+  padding-top: 2rem ;
+  color: var(--dark-purple);
+}
+
+footer div.flex-row {
+  justify-content: space-evenly;
+  width: 20%;
+  margin: 1em auto;
+}
+
+/* title */
+h3.center-text {
+  color: var(--lilac);
+}
+/* image options */
+.panel img {
+  width: 20%;
+  height: 10%;
+}
+
+
+/* OPTIONS */
+div.wrapper img,
+.wrapper {
+  width: 75%;
+  margin: auto;
+  padding: 1em;
+}
+
+
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: var(--champange);
+    color: var(--burnt-sienna);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: solid 1px whitesmoke;
+    outline: none;
+    transition: 0.4s;
+  }
+
+
+  /* Forms */
+  input [type=text], textarea {
+    width: 100%;
+
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: var(--orange);
+    color: var(--champange);
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+
+
+  @media screen and (min-width: 768px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a.menu-icon {
+      display: none;
+    }
+
+    nav.navbar {
+      display: block;
+    }
+
+    ul.navbar-list {
+      display: flex;
+      justify-content: space-around;
+      font-size: 1rem;
+      margin: 2rem;
+    }
+    
+    /* a.logo {
+      flex: 1;
+    }
+  
+    nav.navbar {
+      flex: 2;
+    } */
+  
+    main.side-by-side {
+      display: flex;
+      
+    }
+
+  }

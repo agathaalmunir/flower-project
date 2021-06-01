@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | FlowerCo</title>
+    <script src="https://kit.fontawesome.com/5dd9ddd947.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/styles/styles.css" type="text/css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+<!-- header -->
+<header>
+    <a href="../pages/index.html" class="logo">
+        <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="logo"> 
+    </a>
+    <nav class="navbar">
+        <ul class="navbar-list hover active-link">
+            <li><a href="#about">About</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="javascript:void(0);" class="menu-icon">
+        <i class="fas fa-bars fa-2x"></i>
+    </a>
+</header>   
+
+<!-- main content -->
+<main class="side-by-side">
+    <section>
+        <h1 class="center-text"> Send Your Bouquet </h1>
+
+<!-- bouquet -->
+        <div class="wrapper">
+            <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="your design">
+        </div>
+
+<!-- your design text -->
+        <h3 class="center-text">Your design</h3>
+    </section>
+
+<!--submission form section  -->
+    <section>
+        <form class="form-container" action="#">
+            <div>
+                <div>
+                    <h3>Add a note to your bouquet! (optional)</h3>
+                    <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message here.."></textarea>
+                </div>
+
+                <div>
+                    <h3>From:</h3>
+                    <label for="sender-name">Name:</label>
+                        <input type="text" id="sender-name" name="sender-name" placeholder="Your name..">
+                        <br>
+                    <label for="sender-email">Email:</label>
+                        <input type="text" id="sender-email" name="sender-email" placeholder="Your email.."> 
+                </div>
+
+                <div>
+                    <h3>To:</h3>
+                    <label for="receiver-name">Name:</label>
+                        <input type="text" id="receiver-name" name="receiver-name" placeholder="Their name..">
+                        <br>
+                    <label for="receiver-email">Email:</label>
+                        <input type="text" id="receiver-email" name="receiver-email" placeholder="Their email.."> 
+                </div>
+            </div>
+        </form>
+    </section>  
+
+
+<!-- Next/submit button --> 
+            <button class="rounded-btn" type="submit" form="creation" value="Submit">Send!</button> 
+        </section>
+<!-- </div> -->  
+</main>
+
+<!-- footer -->
+<footer>
+    <p class="center-text">&copy; FlowerCo</p>
+
+    <div class="flex-row">
+        <a href="https://www.pinterest.com/">
+            <i class="fab fa-pinterest"></i>
+        </a>
+        
+        <a href="https://www.instagram.com/">
+            <i class="fab fa-instagram"></i>
+        </a>
+      
+        <a href="https://github.com/agathaalmunir">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/agatha-almunir">
+            <i class="fab fa-linkedin"></i>
+        </a>         
+    </div>
+
+</footer>
+</body>
+</html>
