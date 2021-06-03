@@ -83,7 +83,6 @@ main {
 .pot {
   position: absolute;
   z-index: 3;
-  display: none;
 }
 
 .tape {
