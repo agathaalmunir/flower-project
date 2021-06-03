@@ -36,9 +36,10 @@ body {
 .rounded-btn {
   border: none;
   border-radius: 0.8em;
-  padding: 0.8em;
+  padding: 0;
   text-align: center;
-  width: 3.8em;
+  width: 7em;
+  height: 2.5em;
   margin: auto;
   display: block;
   background-color: var(--light-green);
@@ -56,13 +57,96 @@ label.flex-column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+}
+
+.circle img {
+  border: var(--champange) 8px dotted;
+  border-radius: 100px;
+  width: 10rem;
+  padding: 1em;
+}
+
+.light-color-background {
+  background-color: var(--champange);
+}
+
+main {
+  padding: 1.2rem;
+}
+
+/* bouquet */
+.ribbon {
+  position: absolute;
+  z-index: 3;
+}
+
+.pot {
+  position: absolute;
+  z-index: 3;
+  display: none;
+}
+
+.tape {
+  position: absolute; 
+  z-index: 3;
+}
+
+.morning-glory {
+  position: absolute;
+  z-index: 2;
+}
+
+.coneflower {
+  position: absolute;
+  z-index: 2;
+}
+
+.grape-hyacinth {
+  position: absolute;
+  z-index: 2;
+}
+
+.silver-dollar-eucalyptus{
+  position: absolute;
+  z-index: 1;
+}
+
+.babys-breath {
+  position: absolute;
+  z-index: 1;
+}
+
+.leather-fern {
+  position: absolute;
+  z-index: 1;
+}
+
+.bubbles{
+  position: absolute;
+  z-index: 0;
+}
+
+.hearts {
+  position: absolute;
+  z-index: 0;
+}
+
+.sparkles {
+  position: absolute;
+  z-index: 0;
 }
 
 
 /* header */
-a.logo img{
+header {
+  height: 4rem;
+  padding: 0 0 5rem 0;
+  background-color: var(--white);
+}
+
+div.logo img{
   width: 5rem;
+  height: auto;
   display: block;
   padding: 0.8rem 1rem;
 }
@@ -113,7 +197,7 @@ footer {
   flex-flow: column wrap;
   justify-content: center;
   background-color: var(--lilac);
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 footer p {
@@ -146,10 +230,61 @@ div.wrapper img,
   padding: 1em;
 }
 
+.wrapper {
+  width: 85%;
+  margin: auto;
+  padding: 1em;
+}
 
+/* Forms */
+.spaced {
+  margin: 2.5rem 0;
+}
 
+.form-container {
+  width: 100%;
+  margin: auto;
+  padding: 4rem;
+}
 
-/* Style the buttons that are used to open and close the accordion panel */
+section.form-container h3 {
+    text-align: center;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: solid var(--lilac) 2px;
+  border-radius: 10px;
+  margin: .5em 0em;
+}
+
+label {
+  padding: .5em 0;
+  display: inline-block;
+  margin: 0;
+  color: var(--dark-purple);
+}
+
+.sticky-top {
+  position: sticky;
+    top: 1.5rem;
+}
+
+.contact-container {
+  width: 75%;
+  margin: auto;
+  background: whitesmoke;
+  padding: 5em 5rem;
+  border-radius: 30px;
+}
+  
+ /* accordion panel */
+/* panel buttons*/
 .accordion {
     background-color: var(--champange);
     color: var(--burnt-sienna);
@@ -157,78 +292,80 @@ div.wrapper img,
     padding: 18px;
     width: 100%;
     text-align: left;
-    border: solid 1px whitesmoke;
+    border: solid 1px rgb(224, 224, 224);
     outline: none;
     transition: 0.4s;
   }
 
 
-  /* Forms */
-  input [type=text], textarea {
-    width: 100%;
+/* Add a background color to the button when clicked (with the .active class with JS) and hovered*/
+.active, .accordion:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
 
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: '\02795'; 
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; 
+}
+
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    /* position: sticky;
+      top: 0; */
+  }
+
+  a.menu-icon {
+    display: none;
+  }
+
+  nav.navbar {
+    display: block;
+  }
+
+  ul.navbar-list {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    margin: 2rem;
   }
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: var(--orange);
-    color: var(--champange);
+  div.logo {
+    flex: 1;
+  }
+
+  nav.navbar {
+    flex: 2;
+  }
+
+  main.side-by-side {
+    display: flex;
+  }
+
+  section.design {
+    max-width: 50%;
+    margin-top: 1.5rem ;
+  }
+
+  .form-container {
+    padding: 0 4rem 0 0;
   }
   
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
-
-  .accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
-
-
-
-  @media screen and (min-width: 768px) {
-    header {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    a.menu-icon {
-      display: none;
-    }
-
-    nav.navbar {
-      display: block;
-    }
-
-    ul.navbar-list {
-      display: flex;
-      justify-content: space-around;
-      font-size: 1rem;
-      margin: 2rem;
-    }
-    
-    /* a.logo {
-      flex: 1;
-    }
-  
-    nav.navbar {
-      flex: 2;
-    } */
-  
-    main.side-by-side {
-      display: flex;
-      
-    }
-
-  }
+}

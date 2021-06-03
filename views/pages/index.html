@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | FlowerCo</title>
+    <title>Submit | FlowerCo</title>
     <script src="https://kit.fontawesome.com/5dd9ddd947.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/public/styles/styles.css" type="text/css">
     <script src="scripts.js" defer></script>
@@ -13,15 +13,17 @@
 
 <!-- header -->
 <header>
-    <a href="../pages/index.html" class="logo">
-        <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="logo"> 
-    </a>
+    <div class="logo">
+        <a href="../pages/index.html" class="logo">
+            <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="logo"> 
+        </a>
+    </div>  
     <nav class="navbar">
         <ul class="navbar-list hover active-link">
-            <li><a href="#about">About</a></li>
-            <li><a href="#design">Design</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Design</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     <a href="javascript:void(0);" class="menu-icon">
@@ -31,20 +33,47 @@
 
 <!-- main content -->
 <main class="side-by-side">
-    <section>
-        <h1 class="center-text"> Handpick a Virtual Flower Bouquet </h1>
 
 <!-- bouquet -->
-        <div class="wrapper">
-            <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="your design">
+    <section class="design">
+        <div class="sticky-top">
+            <h1 class="center-text"> Handpick a Virtual Flower Bouquet </h1>
+
+            <div class="wrapper">
+                <!-- <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="your design"> -->
+                <div class="base">
+                    <!-- <img class="ribbon" src="../../public/images/Ribbon.png" alt="ribbon"> -->
+                    <img class="pot" src="../../public/images/Pot.png" alt="pot">
+                    <!-- <img class= "tape" src="../../public/images/Tape.png" alt="tape"> -->
+                </div>
+
+            <div class="flower">
+                <!-- <img class="morning-glory" src="../../public/images/Morning Glory.png" alt="morning-glory">
+                <img class="coneflower" src="../../public/images/Coneflower.png" alt="Coneflower"> -->
+                <img class="grape-hyacinth" src="../../public/images/Grape Hyacinth.png" alt="Grape Hyacinth">
+            </div>
+
+            <div class="greenery">
+                <!-- <img class="silver-dollar-eucalyptus" src="../../public/images/Silver Dollar Eucalyptus.png" alt="Silver Dollar Eucalyptus">
+                <img class="babys-breath" src="../../public/images/Babys Breath.png" alt="Baby's Breath"> -->
+                <img class="leather-fern" src="../../public/images/Leather Fern.png" alt="Leather Fern">
+            </div>
+
+            <div class="accents">
+                <!-- <img class="bubbles" src="../../public/images/Bubbles.png" alt="Bubbles">
+                <img class="hearts" src="../../public/images/Hearts.png" alt="Hearts"> -->
+                <img class="sparkles" src="../../public/images/Sparkles.png" alt="Sparkles"> 
+            </div>
+
+            </div>
+
+            <h3 class="center-text">Your design</h3>
         </div>
-<!-- your design text -->
-        <h3 class="center-text">Your design</h3>
     </section>
     
 <!-- dropdown options -->
     <section class="wrapper">
-        <button class="accordion"> Base</button>
+        <button class="accordion">Base</button>
             <div class="panel" class="flex-row">
                 <label for="base" class="flex-column">
                     <img src="../../public/images/Pot.png" alt="small brown pot">
@@ -116,7 +145,9 @@
                 </label>
             </div>
 <!-- Next/submit button --> 
-            <button class="rounded-btn" type="submit" form="creation" value="Submit">Next</button> 
+            <a href="submission.html">
+                <button class="rounded-btn" type="submit" form="creation" value="Submit">Next</button> 
+            </a>    
         </section>
 <!-- </div> -->  
 </main>
