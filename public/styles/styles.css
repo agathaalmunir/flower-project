@@ -27,6 +27,19 @@ body {
     background-color: var(--white);
     color: var(--burnt-sienna);
     font-size: 1em;
+    font-family: 'Baloo Tammudu 2', sans-serif;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2em;
 }
 
 .center-text {
@@ -59,6 +72,13 @@ label.flex-column {
   align-items: center;
 }
 
+.flex-column {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-items: center;
+}
+
 .circle img {
   border: var(--champange) 8px dotted;
   border-radius: 100px;
@@ -72,9 +92,37 @@ label.flex-column {
 
 main {
   padding: 1.2rem;
+  /* display: flex;
+  flex-flow: column wrap;
+  align-items: center; */
 }
 
 /* bouquet */
+
+/* .base {
+  position: absolute;
+  z-index: 3;
+}
+
+.flower {
+  position: absolute;
+  z-index: 2;
+}
+
+.greenery {
+  position: absolute;
+  z-index: 1;
+}
+
+.accents {
+  position: absolute;
+  z-index: 0;
+} */
+
+.visible {
+  display: block;
+}
+
 .ribbon {
   position: absolute;
   z-index: 3;
@@ -141,6 +189,7 @@ header {
   height: 4rem;
   padding: 0 0 5rem 0;
   background-color: var(--white);
+  font-family: 'Baloo Tammudu 2', sans-serif;
 }
 
 div.logo img{
@@ -222,17 +271,26 @@ h3.center-text {
 
 
 /* OPTIONS */
-div.wrapper img,
+div.bouquet-container img {
+  width: 100%;
+  margin: auto ;
+  padding: 1em;
+}
+
+div.bouquet-container {
+  margin: auto;
+ 
+}
+
 .wrapper {
-  width: 75%;
+  width: 50%;
   margin: auto;
   padding: 1em;
 }
 
-.wrapper {
-  width: 85%;
-  margin: auto;
-  padding: 1em;
+section.design {
+  width: 50%;
+  margin: 1em;
 }
 
 /* Forms */
@@ -267,6 +325,7 @@ label {
   display: inline-block;
   margin: 0;
   color: var(--dark-purple);
+  font-family: 'Roboto', sans-serif;
 }
 
 .sticky-top {
@@ -294,6 +353,10 @@ label {
     border: solid 1px rgb(224, 224, 224);
     outline: none;
     transition: 0.4s;
+    font-family: 'Baloo Tammudu 2', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
   }
 
 
@@ -309,6 +372,7 @@ label {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  font-family: 'Roboto', serif;
 }
 
 .accordion:after {
@@ -321,6 +385,10 @@ label {
 .active:after {
   content: "\2796"; 
 }
+
+/* @media screen and (min-width: 320px), (max-width: 768px) {
+
+} */
 
 
 @media screen and (min-width: 768px) {
@@ -356,6 +424,8 @@ label {
 
   main.side-by-side {
     display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
   }
 
   section.design {

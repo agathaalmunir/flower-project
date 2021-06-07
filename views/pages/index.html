@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/5dd9ddd947.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/public/styles/styles.css" type="text/css">
     <script src="scripts.js" defer></script>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,7 +17,7 @@
 <header>
     <div class="logo">
         <a href="../pages/index.html" class="logo">
-            <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="logo"> 
+            <img src="../../public/images/Flower Code Logo.png" alt="logo"> 
         </a>
     </div>  
     <nav class="navbar">
@@ -32,31 +34,33 @@
 </header>   
 
 <!-- main content -->
-<main class="side-by-side">
+<main class="side-by-side flex-column">
 
 <!-- bouquet -->
-    <section class="design">
-        <div class="sticky-top">
+<section class="design">
+    <div class="sticky-top flex-column">
+        <div>
             <h1 class="center-text"> Handpick a Virtual Flower Bouquet </h1>
+        </div>
 
-            <div class="wrapper">
-                <!-- <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="your design"> -->
-                <div class="base">
-                    <!-- <img class="ribbon" src="../../public/images/Ribbon.png" alt="ribbon"> -->
-                    <img class="pot" src="../../public/images/Pot.png" alt="pot">
-                    <!-- <img class= "tape" src="../../public/images/Tape.png" alt="tape"> -->
-                </div>
+        <div class="bouquet-container">
+            <!-- <img src="../../public/images/Example_Grape Hyacinth.jpeg" alt="your design"> -->
+            <div class="base">
+                <img class="ribbon" src="../../public/images/Ribbon.png" alt="ribbon">
+                <img class="pot" src="../../public/images/Pot.png" alt="pot">
+                <!-- <img class= "tape" src="../../public/images/Tape.png" alt="tape"> -->
+            </div>
 
             <div class="flower">
-                <!-- <img class="morning-glory" src="../../public/images/Morning Glory.png" alt="morning-glory">
-                <img class="coneflower" src="../../public/images/Coneflower.png" alt="Coneflower"> -->
+                <!-- <img class="morning-glory" src="../../public/images/Morning Glory.png" alt="morning-glory"> -->
+                <!-- <img class="coneflower" src="../../public/images/Coneflower.png" alt="Coneflower"> -->
                 <img class="grape-hyacinth" src="../../public/images/Grape Hyacinth.png" alt="Grape Hyacinth">
             </div>
 
             <div class="greenery">
-                <!-- <img class="silver-dollar-eucalyptus" src="../../public/images/Silver Dollar Eucalyptus.png" alt="Silver Dollar Eucalyptus">
-                <img class="babys-breath" src="../../public/images/Babys Breath.png" alt="Baby's Breath"> -->
+                <!-- <img class="babys-breath" src="../../public/images/Babys Breath.png" alt="Baby's Breath"> -->
                 <img class="leather-fern" src="../../public/images/Leather Fern.png" alt="Leather Fern">
+                <!-- <img class="silver-dollar-eucalyptus" src="../../public/images/Silver Dollar Eucalyptus.png" alt="Silver Dollar Eucalyptus"> -->
             </div>
 
             <div class="accents">
@@ -65,28 +69,30 @@
                 <img class="sparkles" src="../../public/images/Sparkles.png" alt="Sparkles"> 
             </div>
 
-            </div>
-
-            <h3 class="center-text">Your design</h3>
         </div>
-    </section>
+        
+        <div>
+            <h3 class="center-text">Your design</h3>
+         </div>  
+    </div>
+</section>
+
     
 <!-- dropdown options -->
     <section class="wrapper">
         <button class="accordion">Base</button>
-            <div class="panel" class="flex-row">
-                <label for="base" class="flex-column">
+            <div class="panel">
+                <label for="base" class=" pot-option">Pot
+                    <input type="radio" name="base" value="pot"> 
                     <img src="../../public/images/Pot.png" alt="small brown pot">
-                    <input type="radio" name="base" value="pot" checked>
-                    <span>Pot</span> 
                 </label>
 
-                <label for="base" class="flex-column">Tape 
+                <label for="base">Tape 
                     <input type="radio" name="base" value="tape">
                     <img src="../../public/images/Tape.png" alt="strip of clear tape">
                 </label>
             
-                <label for="base" class="flex-column">Ribbon
+                <label for="base" class=" ribbon-option">Ribbon
                     <input type="radio" name="base" value="ribbon">
                     <img src="../../public/images/Ribbon.png" alt="small red ribbon bow">
                 </label>
@@ -111,11 +117,6 @@
 
             <button class="accordion">Greenery</button>
             <div class="panel">
-                <label for="greenery">Silver Dollar Eucalyptus
-                    <input type="radio" name="greenery" value="silver-dollar-eucalyptus" checked>
-                    <img src="../../public/images/Silver Dollar Eucalyptus.png" alt="Silver Dollar Eucalyptus">
-                </label>
-
                 <label for="greenery">Baby's Breath
                     <input type="radio" name="greenery" value="babys-breath">
                     <img src="../../public/images/Babys Breath.png" alt="Baby's Breath">
@@ -124,6 +125,11 @@
                 <label for="greenery">Leather Fern
                     <input type="radio" name="greenery" value="leather-fern">
                     <img src="../../public/images/Leather Fern.png" alt="Leather Fern">
+                </label>
+
+                <label for="greenery">Silver Dollar Eucalyptus
+                    <input type="radio" name="greenery" value="silver-dollar-eucalyptus" checked>
+                    <img src="../../public/images/Silver Dollar Eucalyptus.png" alt="Silver Dollar Eucalyptus">
                 </label>
             </div>
 
@@ -148,13 +154,13 @@
             <a href="submission.html">
                 <button class="rounded-btn" type="submit" form="creation" value="Submit">Next</button> 
             </a>    
-        </section>
+    </section>
 <!-- </div> -->  
 </main>
 
 <!-- footer -->
 <footer>
-    <p class="center-text">&copy; FlowerCo</p>
+    <p class="center-text">&copy; FlowerCode</p>
 
     <div class="flex-row">
         <a href="https://www.pinterest.com/">
