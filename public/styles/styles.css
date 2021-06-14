@@ -31,15 +31,15 @@ body {
 }
 
 h1 {
-  font-size: 1.7rem;
-}
-
-h2 {
   font-size: 1.5rem;
 }
 
+h2 {
+  font-size: 1.2rem;
+}
+
 h3 {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .center-text {
@@ -60,24 +60,6 @@ h3 {
   margin: 2em auto;
 }
 
-.flex-row {
-  display: flex;
-  width: 2em;
-  padding: 0em;
-}
-
-label.flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flex-column {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-items: center;
-}
 
 .circle img {
   border: var(--champange) 8px dotted;
@@ -92,14 +74,41 @@ label.flex-column {
 
 main {
   padding: 1.2rem;
-  /* display: flex;
-  flex-flow: column wrap;
-  align-items: center; */
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex-half {
+  width: 50%;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.sticky {
+  position: sticky;
+  top: 15px;
+}
+
+.left-padding {
+  padding-left: 10em;
+  padding-top: 2em;
+  position: relative;
 }
 
 /* bouquet */
-
-/* .base {
+.base {
   position: absolute;
   z-index: 3;
 }
@@ -117,70 +126,91 @@ main {
 .accents {
   position: absolute;
   z-index: 0;
-} */
+}
 
-.visible {
+
+.show-div {
   display: block;
 }
 
-.ribbon {
-  position: absolute;
-  z-index: 3;
+.hide-div {
+  display: none;
 }
 
+.message-form {
+  display: none;
+}
 .pot {
   position: absolute;
   z-index: 3;
+  display: block;
 }
 
 .tape {
   position: absolute; 
   z-index: 3;
+  display: none;
 }
 
-.morning-glory {
+.ribbon {
   position: absolute;
-  z-index: 2;
-}
-
-.coneflower {
-  position: absolute;
-  z-index: 2;
+  z-index: 3;
+  display: none;
 }
 
 .grape-hyacinth {
   position: absolute;
   z-index: 2;
+  display: block;
 }
 
-.silver-dollar-eucalyptus{
+.morning-glory {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  display: none;
+
 }
 
-.babys-breath {
+.coneflower {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  display: none;
 }
 
 .leather-fern {
   position: absolute;
   z-index: 1;
+  display: block;
+}
+
+.babys-breath {
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.silver-dollar-eucalyptus{
+  position: absolute;
+  z-index: 1;
+  display: none;
 }
 
 .bubbles{
   position: absolute;
   z-index: 0;
+  display: block;
 }
 
 .hearts {
   position: absolute;
   z-index: 0;
+  display: none;
 }
 
 .sparkles {
   position: absolute;
   z-index: 0;
+  display: none;
 }
 
 
@@ -195,8 +225,8 @@ header {
 div.logo img{
   width: 5rem;
   height: auto;
-  display: block;
   padding: 0.8rem 1rem;
+  align-self: left;
 }
 
 ul.navbar-list li {
@@ -253,7 +283,7 @@ footer p {
   color: var(--dark-purple);
 }
 
-footer div.flex-row {
+footer >div {
   justify-content: space-evenly;
   width: 20%;
   margin: 1em auto;
@@ -263,35 +293,19 @@ footer div.flex-row {
 h3.center-text {
   color: var(--lilac);
 }
-/* image options */
-.panel img {
-  width: 20%;
-  height: 10%;
-}
-
 
 /* OPTIONS */
-div.bouquet-container img {
-  width: 100%;
-  margin: auto ;
-  padding: 1em;
-}
-
-div.bouquet-container {
-  margin: auto;
- 
-}
-
-.wrapper {
-  width: 50%;
-  margin: auto;
-  padding: 1em;
-}
-
 section.design {
   width: 50%;
   margin: 1em;
 }
+
+img {
+  width: 10em;
+  margin: auto ;
+  padding: 1em;
+}
+
 
 /* Forms */
 .spaced {
@@ -302,10 +316,6 @@ section.design {
   width: 100%;
   margin: auto;
   padding: 4rem;
-}
-
-section.form-container h3 {
-    text-align: center;
 }
 
 textarea {
@@ -328,11 +338,6 @@ label {
   font-family: 'Roboto', sans-serif;
 }
 
-.sticky-top {
-  position: sticky;
-    top: 1.5rem;
-}
-
 .contact-container {
   width: 75%;
   margin: auto;
@@ -348,9 +353,9 @@ label {
     color: var(--burnt-sienna);
     cursor: pointer;
     padding: 18px;
-    width: 100%;
     text-align: left;
     border: solid 1px rgb(224, 224, 224);
+    width: 100%;
     outline: none;
     transition: 0.4s;
     font-family: 'Baloo Tammudu 2', sans-serif;
@@ -386,17 +391,30 @@ label {
   content: "\2796"; 
 }
 
-/* @media screen and (min-width: 320px), (max-width: 768px) {
+@media only screen and (min-width: 320px), (max-width: 480px) { 
+  .left-padding {
+    padding-left: 1em;
+    padding-right: 100rem;
+    padding-top: 2rem;
+  }
 
-} */
+  /* .flex-half {
+    width: 100%
+  } */
+} 
 
+@media only screen and (min-width: 481px), (max-width: 768px) {
+  .left-padding {
+    padding-left: 0rem;
+    padding-right: 100rem;
+    padding-top: 2rem;
+  }
+}
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   header {
     display: flex;
     justify-content: space-between;
-    /* position: sticky;
-      top: 0; */
   }
 
   a.menu-icon {
@@ -413,7 +431,7 @@ label {
     font-size: 1rem;
     margin: 2rem;
   }
-  
+
   div.logo {
     flex: 1;
   }
@@ -422,19 +440,17 @@ label {
     flex: 2;
   }
 
-  main.side-by-side {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-  }
+ .flex-half {
+   width: 50%;
+ }
 
-  section.design {
-    max-width: 50%;
-    margin-top: 1.5rem ;
-  }
+ .left-padding {
+   padding-left: 17em;
+   padding-right: 10em;
+   padding-top: 3rem;
+ }
 
   .form-container {
     padding: 0 4rem 0 0;
   }
-  
 }

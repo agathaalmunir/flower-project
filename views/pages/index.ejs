@@ -1,0 +1,131 @@
+<%- include('../partials/head') -%>
+
+<%- include('../partials/nav') -%>
+
+
+<!-- main content -->
+<main class="flex wrap">
+
+<!-- bouquet -->
+<section class="flex-half">
+    <div class="sticky">
+        <div>
+            <h1 class="center-text"> Handpick a Virtual Flower Bouquet </h1>
+        </div>
+
+        <div>
+            <div class="base left-padding">
+                <img class="ribbon position" src="/images/Ribbon.png" alt="ribbon">
+                <img class="pot" src="/images/Pot.png" alt="pot">
+                <img class= "tape" src="/images/Tape.png" alt="tape">
+            </div>
+
+            <div class="flower left-padding">
+                <img class="grape-hyacinth" src="/images/Grape Hyacinth.png" alt="Grape Hyacinth">
+                <img class="morning-glory" src="/images/Morning Glory.png" alt="morning-glory">
+                <img class="coneflower" src="/images/Coneflower.png" alt="Coneflower">
+            </div>
+
+            <div class="greenery left-padding">
+                <img class="babys-breath" src="/images/Babys Breath.png" alt="Baby's Breath">
+                <img class="leather-fern" src="/images/Leather Fern.png" alt="Leather Fern">
+                <img class="silver-dollar-eucalyptus" src="/images/Silver Dollar Eucalyptus.png" alt="Silver Dollar Eucalyptus">
+            </div>
+
+            <div class="accents left-padding">
+                <img class="bubbles" src="/images/Bubbles.png" alt="Bubbles">
+                <img class="hearts" src="/images/Hearts.png" alt="Hearts">
+                <img class="sparkles" src="/images/Sparkles.png" alt="Sparkles"> 
+            </div>
+
+        </div>
+        
+        <div>
+            <h3 class="center-text">Your design</h3>
+         </div>  
+    </div>
+</section>
+    
+<!-- dropdown options -->
+<section class="flex-half">
+    <form action="/design" method="POST">
+            <div class="accordion">Base</div>
+            <div class="panel">
+                <label for="base">Pot
+                    <input class="pot-option" type="radio" name="base" value="pot" checked> 
+                    <img src="/images/Pot.png" alt="small brown pot">
+                </label>
+
+                <label for="base">Tape 
+                    <input class="tape-option" type="radio" name="base" value="tape">
+                    <img src="/images/Tape.png" alt="strip of clear tape">
+                </label>
+            
+                <label for="base">Ribbon
+                    <input class="ribbon-option" type="radio" name="base" value="ribbon">
+                    <img src="/images/Ribbon.png" alt="small red ribbon bow">
+                </label>
+            </div>
+
+            <div class="accordion">Flowers</div>
+            <div class="panel">
+                <label for="flower">Grape Hyacinth
+                    <input class="grape-hyacinth-option" type="radio" name="flower" value="grape-hyacinth" checked>
+                    <img src="/images/Grape Hyacinth.png" alt="purple Grape Hyacinth">
+                </label>
+
+                <label for="flower">Morning Glory
+                    <input type="radio" name="flower" value="morning-glory" class="morning-glory-option">
+                    <img src="/images/Morning Glory.png" alt="Light blue Morning Glory">
+                </label>
+
+                <label for="flower">Coneflower
+                    <input type="radio" name="flower" value="coneflower" class="coneflower-option">
+                    <img src="/images/Coneflower.png" alt="Light pink Coneflower">
+                </label>
+            </div>
+
+            <div class="accordion">Greenery</div>
+            <div class="panel">
+                <label for="greenery">Leather Fern
+                    <input type="radio" name="greenery" value="leather-fern" class="leather-fern-option" checked>
+                    <img src="/images/Leather Fern.png" alt="Leather Fern">
+                </label>
+
+                <label for="greenery">Baby's Breath
+                    <input type="radio" name="greenery" value="babys-breath" class="babys-breath-option">
+                    <img src="/images/Babys Breath.png" alt="Baby's Breath">
+                </label>
+
+                <label for="greenery">Silver Dollar Eucalyptus
+                    <input type="radio" name="greenery" value="silver-dollar-eucalyptus" class="silver-dollar-option">
+                    <img src="/images/Silver Dollar Eucalyptus.png" alt="Silver Dollar Eucalyptus">
+                </label>
+            </div>
+
+            <div class="accordion">Accents</div>
+            <div class="panel">
+                <label for="accents">Bubbles
+                    <input type="radio" name="accents" value="bubbles" checked class="bubbles-option">
+                    <img src="/images/Bubbles.png" alt="blue bubbles">
+                </label>
+
+                <label for="accents">Hearts
+                    <input type="radio" name="accents" value="hearts" class="hearts-option">
+                    <img src="/images/Hearts.png" alt="red hearts">
+                </label>
+            
+                <label for="accents">Sparkles
+                    <input type="radio" name="accents" value="sparkles" class="sparkles-option">
+                    <img src="/images/Sparkles.png" alt="yellow sparkles">
+                </label>
+            </div>
+    <!-- Next/submit button --> 
+                <button class="rounded-btn next" type="submit" value="Submit">Next</button>  
+    </form>
+</section>
+<!-- </div> -->  
+</main>
+
+<%- include('../partials/footer') -%>
+

@@ -1,0 +1,83 @@
+<%- include('../partials/head') -%>
+
+<%- include('../partials/nav') -%>
+   
+
+<!-- main content -->
+<main class="flex wrap">
+
+    <!-- bouquet -->
+    <section class="flex-half">
+        <div class="sticky">
+            <div>
+                <h1 class="center-text"> Handpick a Virtual Flower Bouquet </h1>
+            </div>
+    
+            <div class= >
+                <div class="base left-padding">
+                    <img class="<%= design.base %>" src="/images/<%= design.base %>.png" alt="<%= design.base %>">
+                </div>
+    
+                <div class="flower left-padding">
+                    <img class="grape-hyacinth" src="/images/Grape Hyacinth.png" alt="Grape Hyacinth">
+                    <img class="morning-glory" src="/images/Morning Glory.png" alt="morning-glory">
+                    <img class="coneflower" src="/images/Coneflower.png" alt="Coneflower">
+                </div>
+    
+                <div class="greenery left-padding">
+                    <img class="babys-breath" src="/images/Babys Breath.png" alt="Baby's Breath">
+                    <img class="leather-fern" src="/images/Leather Fern.png" alt="Leather Fern">
+                    <img class="silver-dollar-eucalyptus" src="/images/Silver Dollar Eucalyptus.png" alt="Silver Dollar Eucalyptus">
+                </div>
+    
+                <div class="accents left-padding">
+                    <img class="bubbles" src="/images/Bubbles.png" alt="Bubbles">
+                    <img class="hearts" src="/images/Hearts.png" alt="Hearts">
+                    <img class="sparkles" src="/images/Sparkles.png" alt="Sparkles"> 
+                </div>
+    
+            </div>
+            
+            <div>
+                <h3 class="center-text">Your design</h3>
+             </div>  
+        </div>
+    </section>
+
+<!--submission form section  -->
+    <section class="flex-half">
+        <form action="/design/<%= design._id %>?_method=PUT" method="POST">
+            <div>
+                <div>
+                    <h3>Add a note!</h3>
+                    <label for="message">*Message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message here.." required minlength="1"></textarea>
+                </div>
+
+                <div class="spaced">
+                    <h3>From</h3>
+                    <label for="sender-name">*Name:</label>
+                        <input type="text" id="sender-name" name="sender-name" placeholder="Your name.." required minlength="1">
+                        <br>
+                    <label for="sender-email">*Email:</label>
+                        <input type="text" id="sender-email" name="sender-email" placeholder="Your email.." required minlength="1"> 
+                </div>
+
+                <div class="spaced">
+                    <h3>To</h3>
+                    <label for="receiver-name">*Name:</label>
+                        <input type="text" id="receiver-name" name="receiver-name" placeholder="Their name.." required minlength="5">
+                        <br>
+                    <label for="receiver-email">*Email:</label>
+                        <input type="text" id="receiver-email" name="receiver-email" placeholder="Their email.." required minlength="5"> 
+                </div>
+            </div>
+        
+        <!-- Submit button --> 
+        <button class="rounded-btn" type="submit" value="Submit">Send!</button>
+    </form> 
+    </section>    
+</main>
+
+<%- include('../partials/footer') -%>
+
