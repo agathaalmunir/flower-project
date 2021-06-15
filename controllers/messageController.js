@@ -3,9 +3,11 @@ const Message = require('../models/messageModel');
 const Design = require('../models/designModel');
 
 module.exports = {
-    message_create_get: (require, response) => {
-        const designId = request.params.id;
+    message_create_get: (request, response) => {
+        const designId = request.params.idParams;
+        console.log(designId);
         Design.findOne({_id: designId}, (error, foundDesign) => {
+            // console.log(foundDesign);
             if (error) {
                 return error;
             } else {
@@ -13,7 +15,7 @@ module.exports = {
             }
         })
     },
-    message_create_post: (require, response) => {
+    message_create_post: (request, response) => {
         const newMessage = new Message ({
             messageText: request.body.messageText,
             senderName:  request.body.senderName,

@@ -62,7 +62,7 @@ h3 {
 
 
 .circle img {
-  border: var(--champange) 8px dotted;
+  border: var(--champange) 8px solid;
   border-radius: 100px;
   width: 10rem;
   padding: 1em;
@@ -259,6 +259,7 @@ nav.navbar.open {
   display: block;
   max-width: 75%;
   margin: 2em;
+  background-color: var(--champange);
 }
 
 .hover a:hover {
@@ -279,7 +280,7 @@ footer {
 }
 
 footer p {
-  padding-top: 2rem ;
+  padding-top: 2rem;
   color: var(--dark-purple);
 }
 

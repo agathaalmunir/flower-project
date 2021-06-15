@@ -5,7 +5,7 @@ const router = express.Router();
 const messageController = require('../controllers/messageController');
 
 // Path is /submission/
-router.route('/')
+router.route('/:idParams')
 //Display New Message Form
     .get(messageController.message_create_get)
 // Creates new message form

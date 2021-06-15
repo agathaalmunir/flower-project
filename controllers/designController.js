@@ -33,11 +33,13 @@ module.exports = {
             accents: request.body.accents,
         });
         newDesign.save();
-        response.redirect('/submission');
+        response.redirect(`/submission/${newDesign._id}`);
     },
     design_update_get: (request, response) => {
         const { id } = request.params;
         Design.findOne({_id: id}, (error, singleDesign) => {
+          console.log(id);
+          console.log(singleDesign.base);
           if(error) {
             return error;
           } else {
@@ -46,7 +48,7 @@ module.exports = {
         });
     },
     design_update_put: (request, response) => {
-            const { id } = request.params;
+            const { id } = request.params.id;
             Design.findByIdAndUpdate(id, {$set: {
                 messageText: request.body.messageText,
                 senderName: request.body.senderName,
@@ -57,7 +59,11 @@ module.exports = {
                 if (error) {
                     return error;
                 } else {
-                    response.redirect('pages/designMessageConfirmation')
+                    const message = {
+                        senderName: request.body.senderName,
+                        recipientName: request.body.recipientName,
+                    }
+                    response.render('pages/designMessageConfirmation', {message: message});
             }
         })
     }

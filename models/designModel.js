@@ -5,7 +5,12 @@ const designSchema = new Schema({
     base: String,
     flower: String,
     greenery: String,
-    accents: String
+    accents: String,
+    messageText: String,
+    senderName: String,
+    senderEmail: String,
+    recipientName: String,
+    recipientEmail: String,
 });
 
 const Design = mongoose.model('Design', designSchema)
