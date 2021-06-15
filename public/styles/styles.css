@@ -287,7 +287,8 @@ footer {
   flex-flow: column wrap;
   justify-content: center;
   background-color: var(--lilac);
-  margin-top: 6rem;
+  margin-top: 7rem;
+  margin-bottom: 0rem;
 }
 
 footer p {
