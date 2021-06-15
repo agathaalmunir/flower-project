@@ -30,7 +30,7 @@ module.exports = {
             base: request.body.base,
             flower: request.body.flower,
             greenery: request.body.greenery,
-            accents: request.body.accents,
+            accents: request.body.accents
         });
         newDesign.save();
         response.redirect(`/submission/${newDesign._id}`);

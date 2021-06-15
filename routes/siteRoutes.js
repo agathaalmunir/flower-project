@@ -1,8 +1,14 @@
 // Display the About Page
-app.get('/about', (request, response) => {
-    response.render('pages/about')
-});
+const express = require('express');
+const router = express.Router();
+const siteController = require('../controllers/siteController');
 
-app.get('/', (request, response) => {
-    response.redirect('/design');
-});
+router.route('/')
+    .get(siteController.index);
+    
+router.route('about')
+    .get(siteController.about);
+
+module.exports = router;
+
+

@@ -13,7 +13,7 @@ const designSchema = new Schema({
     recipientEmail: String,
 });
 
-const Design = mongoose.model('Design', designSchema)
+const Design = mongoose.model('Design', designSchema);
 
 // Sample entry
 // const designSample = new Design({base:'pot', flower:'coneflower', greenery:'babys-breath', accents:'sparkles'});

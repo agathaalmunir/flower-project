@@ -5,7 +5,7 @@
 <main>
 <!--submission form section  -->
 <section class="contact-container">
-    <form action="#">
+    <form action="/contact" method="POST">
         <div>
             <div class="center-text">
                 <h1>Get in touch!</h1>
@@ -14,24 +14,24 @@
             </div>
 
             <div class="spaced">
-                <label for="guest-name">Name:</label>
-                    <input type="text" id="guest-name" name="guest-name" placeholder="Name">
+                <label for="senderName">*Name:</label>
+                    <input type="text" id="senderName" name="senderName" placeholder="Name" required minlength="1">
                     <br>
-                <label for="sender-email">Email:</label>
-                    <input type="text" id="sender-email" name="sender-email" placeholder="Email"> 
+                <label for="senderEmail">*Email:</label>
+                    <input type="email" id="senderEmail" name="senderEmail" placeholder="Email" required minlength="5"> 
             </div>
 
             <div>
-                <h3>Thoughts? Questions? Concerns?</h3>
+                <h3>*Thoughts? Questions? Concerns?</h3>
                 <label for="message"></label>
-                    <textarea id="message" name="message" placeholder="Write your message here.."></textarea>
+                    <textarea id="message" name="message" placeholder="Write your message here.." required minlength="1" maxlength="300"></textarea>
             </div>
-
         </div>
+    
+        <!-- Submit button --> 
+        <button class="rounded-btn" type="submit" value="Submit">Send!</button> 
     </form>
     
-    <!-- Submit button --> 
-    <button class="rounded-btn" type="submit" form="creation" value="Submit">Send!</button> 
 </section>    
 </main>
 
