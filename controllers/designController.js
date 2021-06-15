@@ -49,6 +49,7 @@ module.exports = {
     },
     design_update_put: (request, response) => {
             const { id } = request.params.id;
+            console.log(id);
             Design.findByIdAndUpdate(id, {$set: {
                 messageText: request.body.messageText,
                 senderName: request.body.senderName,
