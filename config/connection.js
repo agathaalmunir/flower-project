@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/flowerCode', {useNewUrlParser: true, useUnifiedTopology: true}, (error) => {
+mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}, (error) => {
     if (error) {
+        console.log(error);
         console.log('Error with MongoDB connectivity');
     } else {
         console.log('Successful connection with MongoDB Server');
     }
 });
+
+mongoose.set('useCreateIndex', true);
