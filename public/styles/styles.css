@@ -270,6 +270,7 @@ nav.navbar.open {
   display: block;
   max-width: 75%;
   margin: 2em;
+  /* height: fit-content; */
   background-color: var(--champange);
 }
 

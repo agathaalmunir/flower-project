@@ -16,7 +16,7 @@ router.route('/new')
 //PATH IS /design/:id 
 router.route('/:id')
     .get(designController.design_detail) 
-    .put(designController.design_update_put);
+    .post(designController.design_update_put);
 
 router.route(':/id/edit')
     .get(designController.design_update_get);
