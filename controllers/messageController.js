@@ -7,25 +7,12 @@ module.exports = {
         const designId = request.params.idParams;
         console.log(designId);
         Design.findOne({_id: designId}, (error, foundDesign) => {
-            // console.log(foundDesign);
             if (error) {
                 return error;
             } else {
+              console.log(foundDesign.base)
                 response.render('pages/submission', {design: foundDesign})
             }
         })
-    },
-    message_create_post: (request, response) => {
-        const newMessage = new Message ({
-            messageText: request.body.messageText,
-            senderName:  request.body.senderName,
-            senderEmail: request.body.senderEmail,
-            recipientName:  request.body.recipientName,
-            recipientEmail: request.body.recipientEmail
-        });
-
-    newMessage.save();
-
-    response.redirect("pages/designMessageConfirmation")
     }
 };

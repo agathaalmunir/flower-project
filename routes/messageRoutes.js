@@ -8,8 +8,5 @@ const messageController = require('../controllers/messageController');
 router.route('/:idParams')
 //Display New Message Form
     .get(messageController.message_create_get)
-// Creates new message form
-    .post(messageController.message_create_post)
-
 
 module.exports = router;

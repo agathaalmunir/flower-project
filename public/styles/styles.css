@@ -130,11 +130,7 @@ main {
 
 
 .show-div {
-  display: block;
-}
-
-.hide-div {
-  display: none;
+  display: block !important;
 }
 
 .message-form {
