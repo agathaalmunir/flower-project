@@ -8,7 +8,7 @@ const { redirect } = require('statuses');
 const routes = require('./routes/index');
 const methodOverride = require('method-override');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.set ('view engine', 'ejs');
 
